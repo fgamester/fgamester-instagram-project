@@ -1,0 +1,79 @@
+* { /*Roboto definido como fuente para todo el texto de la pagina, y texto de color blanco*/
+    font-family: "Roboto";
+    color: white;
+}
+
+#header { /*definiendo los atributos necesarios para el contenedor del encabezado de la pagina, fondo blanco, display flex para poder justificar el contenido al centro, position fixed para que se mantenga a vista independiente de hacer scroll*/
+    position: fixed;
+    width: inherit;
+    height: 80px;
+    background-color: rgb(21,32,43);
+    display: flex;
+    justify-content: center;
+    opacity: 80%;
+}
+
+body { /*fondo para el resto del cuerpo, margen 0 para cubrir ciertos contenidos hasta el borde*/
+    background-color: rgb(80, 90, 100);
+    margin: 0;
+    width: 100%;
+}
+
+h1 { /*definiendo el ancho del box para coincidir la alineación con los contenedores que dispondremos para las imagenes del feed*/
+    width: 700px;
+}
+
+#contentArea{ /*display flex para alinear al centro y apilar uno sobre otro, margen inferior para añadir un pequeño espacio al final del feed*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+    padding-top: 80px;
+}
+
+.contentBox { /*definiendo el formato base para los box del contenido, un margen superior para un espaciado entre cada post, height auto para ajustarse a img*/
+    width: 700px;
+    height: auto;
+    background-color: rgb(21,32,43);
+    margin-top: 50px;
+    border-radius: 15px;
+}
+
+.boxHeader { /*box que contiene titulo y fecha del post, display flex para posicionar uno al lado del otro, padding-top y min-height para agregar y posicionar un espacio y no interferir con border-radius*/
+    display: flex;
+    padding-top: 15px;
+    min-height: 5px;
+}
+
+h3, /*selector que disminuye las medidas default para optimizar espacio*/
+h4 {
+    margin: 0px 15px 5px;
+}
+
+h4 { /*auto margen para alinearse a la derecha del titulo*/
+    margin-left: auto;
+}
+
+.boxImg { /*ancho inherit para ser igual a su contenedor padre, altura auto para ajustarse al tamaño que tendrá la img que se inserte, display flex para que las medidas se ajusten correctamente*/
+    width: inherit;
+    display: flex;
+}
+
+.boxFooter { /*padding-bottom y min-height para mantener una altura minima en caso de no contar con descripcion o sumarle esa medida en caso de contar con una*/
+    padding-bottom: 15px;
+    min-height: 5px;
+}
+
+.postImg { /*ancho heredado del div padre*/
+    width: inherit;
+}
+
+h5 { /*margenes pare ajustar el texto y no interferir con border-radius del box*/
+    margin: 3px 5px 0px;
+    font-size: 0.9em;
+}
+
+p { /*margenes y font size para no superar al h5 que lo precede*/
+    margin: 0px 5px;
+    font-size: 0.8em;
+}
